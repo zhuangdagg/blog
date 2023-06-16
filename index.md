@@ -1,6 +1,6 @@
 ---
 home: true
-title: 666
+title: home
 features:
   - title: Simplicity First
     details: Minimal setup with markdown-centered project structure helps you focus on writing.
@@ -11,7 +11,8 @@ features:
 footer: MIT Licensed | Copyright © 2019-present Evan You
 ---
 
-# 目录
-## [语法](/src/js/grammar.md)
+# 目录  
+---
+####  1. [语法](/src/js/grammar.md)
 
-aaa
+#### 2. [日常总结](/src/diary/index.md)
