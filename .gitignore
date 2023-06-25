@@ -8,7 +8,7 @@ build-image/build.tar.gz
 proxy/views/index.ejs
 config/local-config.js
 config/nacos-config.js
-config/dist
+.vitepress/dist
 .vitepress/cache
 
 *.tmp
