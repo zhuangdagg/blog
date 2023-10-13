@@ -50,12 +50,12 @@ export default defineConfig({
                         {
                             text: '语法',
                             link: '/src/js/grammar.html',
-                          },
-                          {
+                        },
+                        {
                             text: '日常记录',
                             link: '/src/diary/index.html',
-                          },
-                            ],
+                        },
+                    ],
                 },
             ],
             // 语法知识
