@@ -1,8 +1,9 @@
-import { defineConfig } from 'vitepress'
-import { getPathName } from '../utils'
+import { defineConfig } from 'vitepress';
+import { getPathName } from '../utils';
 
-const diaryList = getPathName('./src/diary').filter(item => item !== 'index.md')
-
+const diaryList = getPathName('./src/diary').filter(
+    (item) => item !== 'index.md'
+);
 
 export default defineConfig({
     title: 'blog',
@@ -11,8 +12,8 @@ export default defineConfig({
         root: {
             label: '简体中文',
             lang: 'zh-CN',
-            link: '/'
-        }
+            link: '/',
+        },
     },
     themeConfig: {
         docFooter: {
@@ -23,18 +24,18 @@ export default defineConfig({
             {
                 icon: 'github',
                 link: 'https://github.com/zhuangdagg',
-            }
+            },
         ],
         footer: {
             copyright: 'Copyright © 2023-present blunt',
             message: 'Released under the MIT License.',
-          },
+        },
         // 导航栏
         nav: [
             {
                 text: '关于',
                 link: '/about/',
-                activeMatch: '^/',
+                activeMatch: '/src/resume/resume.html',
             },
             {
                 text: '其他',
@@ -63,18 +64,16 @@ export default defineConfig({
                 {
                     text: 'js',
                     collapsed: true,
-                    items: [
-                        { text: '变量', link: './' }
-                    ]
-                }
+                    items: [{ text: '变量', link: './' }],
+                },
             ],
             // 语法知识
-            '/src/diary': diaryList.map(item => {
+            '/src/diary': diaryList.map((item) => {
                 return {
                     text: item.slice(0, -3),
-                    link: './' + item
-                }
+                    link: './' + item,
+                };
             }),
-        }
-    }
-})
+        },
+    },
+});
