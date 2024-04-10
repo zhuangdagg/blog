@@ -2,19 +2,19 @@
 
 ## 基本信息
 
--   姓名：陈广状
--   性别：男
--   电话：`13544978915`
--   邮箱：`1223445257@qq.com`
--   学历：[`本科`](https://www.chsi.com.cn/xlcx/bg.do?vcode=A7J0RYWQXZ8VJGTY&srcid=bgcx)
+- 姓名：陈广状
+- 性别：男
+- 电话：`13544978915`
+- 邮箱：`1223445257@qq.com`
+- 学历：[`本科`](https://www.chsi.com.cn/xlcx/bg.do?vcode=A7J0RYWQXZ8VJGTY&srcid=bgcx)
 
 ## 个人发展
 
--   熟练 xxx;
+- 熟练 xxx;
 
--   掌握 xxx;
+- 掌握 xxx;
 
--   了解 xxx;
+- 了解 xxx;
 
 ## 工作经历
 
