@@ -1,6 +1,5 @@
 .DS_Store
 node_modules
-/dist
 
 build-image/dist
 build-image/proxy
@@ -8,7 +7,6 @@ build-image/build.tar.gz
 proxy/views/index.ejs
 config/local-config.js
 config/nacos-config.js
-.vitepress/dist
 .vitepress/cache
 
 *.tmp
