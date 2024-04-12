@@ -7,7 +7,7 @@ const diaryList = getPathName('./src/diary').filter(
 
 export default defineConfig({
     title: 'blog',
-    base: '/blog/',
+    base: '/weblog/',
     locales: {
         root: {
             label: '简体中文',
