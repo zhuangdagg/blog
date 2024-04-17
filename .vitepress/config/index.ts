@@ -1,9 +1,5 @@
 import { defineConfig } from 'vitepress';
-import { getPathName } from '../utils';
-
-const diaryList = getPathName('./src/diary').filter(
-    (item) => item !== 'index.md'
-);
+import { getPathName, getSidebarLinkList } from '../utils';
 
 export default defineConfig({
     title: 'blog',
@@ -50,11 +46,15 @@ export default defineConfig({
                     items: [
                         {
                             text: '语法',
-                            link: '/src/js/grammar.html',
+                            link: '/src/js/grammar',
                         },
                         {
                             text: '日常记录',
-                            link: '/src/diary/index.html',
+                            link: '/src/diary/index',
+                        },
+                        {
+                            text: 'docker容器',
+                            link: '/src/docker/index',
                         },
                     ],
                 },
@@ -67,13 +67,10 @@ export default defineConfig({
                     items: [{ text: '变量', link: './' }],
                 },
             ],
-            // 语法知识
-            '/src/diary': diaryList.map((item) => {
-                return {
-                    text: item.slice(0, -3),
-                    link: './' + item,
-                };
-            }),
+            // 日常记录
+            '/src/diary': getSidebarLinkList('./src/diary'),
+            // 容器相关
+            '/src/docker': getSidebarLinkList('./src/docker')
         },
     },
 });
