@@ -36,7 +36,7 @@ const handlePrint = () => {
 
 .main {
     &:hover {
-        .resume-content {
+        .resume-helper {
             opacity: 1;
         }
         

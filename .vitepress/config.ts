@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { readdirSync } from 'node:fs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -45,15 +46,19 @@ export default defineConfig({
         text: '分类',
         items: [
           {
-            text: '知识',
+            text: '前端篇',
             link: '/todo'
           },
           {
-            text: '日常记录',
+            text: '后端篇',
             link: '/todo'
           },
           {
-            text: '书写示例',
+            text: '笔记',
+            link: '/docs/note/issues'
+          },
+          {
+            text: '规则示例',
             link: '/docs/example'
           }
         ]
@@ -66,12 +71,18 @@ export default defineConfig({
             text: 'vitepress 使用示例', 
             collapsed: false,
             link: '/docs/example'
-          }  // link 使用绝对路径，这里菜单才会和路由匹配高亮
+          },  // link 使用绝对路径，这里菜单才会和路由匹配高亮
+          
         ],
+        '/docs/note': [{
+          text: '笔记', 
+          collapsed: false,
+          items: getSidebarLinkList('./docs/note', '/docs/note/')
+        }]
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
+      { icon: 'github', link: 'https://github.com/zhuangdagg' },
       // { icon: 'instagram', link: './resume_cn'}
     ],
 
@@ -94,3 +105,18 @@ export default defineConfig({
     externalLinkIcon: true,
   }
 })
+
+function getPathName(path = './') {
+  return readdirSync(path);
+}
+
+function getSidebarLinkList(path = './', prefix = '') {
+  // console.log(getPathName(path))
+  const res = getPathName(path).map(item => ({
+    text: item.slice(0, -3),
+    link: prefix + item
+  }))
+
+  console.log(res)
+  return res
+}

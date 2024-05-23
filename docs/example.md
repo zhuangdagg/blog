@@ -10,7 +10,12 @@ pageClass: 'custom-page-class'
 ---
 
 # Vitepress 用法大全
+
+## [[toc]] 生成目录
 [[toc]]
+::: warning
+一般不需要使用 `[[toc]]` 来手动生成目录，而是用 `outline`
+:::
 
 
 ## `frontmatter` 配置
@@ -25,10 +30,11 @@ name:
 ```md
 {{ $frontmatter.name }}
 ```
+[frontmatter 配置查阅](https://vitepress.dev/zh/reference/frontmatter-config)
 ## 代码片段引用
 
 
-> 尽量把代码示例单独写在一个文件，再引用入文中
+> 尽量把代码示例单独写在 `code` 文件夹内，再引用入文中
 
 <<< @/docs/code/test.js{1,2 js:line-numbers}
 
@@ -40,29 +46,52 @@ name:
 
 
 ## 内嵌markdown文件
+```md
+<!--@include: ../note.md-->
+```
 <!--@include: ./note.md-->
 
 ## 自定义锚点 {#custome-define-id}
 
 ## 自定义容器
 ::: info
-这是info的样式
+```md
+    ::: info
+        // 信息内容
+    :::
+```
 :::
 
 ::: tip
-This is a tip.
+```md
+    ::: tip
+        // 提示内容
+    :::
+```
 :::
 
 ::: warning
-This is a warning.
+```md
+    ::: warning
+        // 信息内容
+    :::
+```
 :::
 
 ::: danger
-This is a dangerous warning.
+```md
+    ::: danger
+        // danger内容
+    :::
+```
 :::
 
 ::: details
-This is a details block.
+```md
+    ::: details
+        // 详细信息内容
+    :::
+```
 :::
 
 > [!NOTE]
@@ -99,6 +128,25 @@ This is a details block.
 // 其他内容
 ...
 
+```
+
+## 运行时 `API` 示例
+```md
+<script setup>
+    import { useData } from 'vitepress'
+    const { theme, page, frontmatter } = useData()
+</script>
+
+## Results
+
+### Theme Data
+<pre>{{ theme }}</pre>
+
+### Page Data
+<pre>{{ page }}</pre>
+
+### Page Frontmatter
+<pre>{{ frontmatter }}</pre>
 ```
 
 
