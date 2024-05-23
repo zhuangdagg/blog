@@ -1,16 +1,25 @@
 ---
+layout: doc # doc|home|page
+navbar: true
+sidebar: false
+aside: true # boolean|'left'
 title: Vitepress 使用示例
+lastUpdated: true # 显示页面上次修改时间
+footer: true
+pageClass: 'custom-page-class'
 ---
 
 # Vitepress 用法大全
 [[toc]]
 
 
-## frontmatter配置
+## `frontmatter` 配置
 示例用法：
 ```md
+---
 title: 定义标题
 name: 
+---
 ```
 > 通过 Vue 表达式中的 `$frontmatter` 全局变量访问 frontmatter 数据：
 ```md
@@ -33,9 +42,9 @@ name:
 ## 内嵌markdown文件
 <!--@include: ./note.md-->
 
-### 自定义锚点 {#custome-define-id}
+## 自定义锚点 {#custome-define-id}
 
-### 自定义容器
+## 自定义容器
 ::: info
 这是info的样式
 :::
@@ -71,10 +80,27 @@ This is a details block.
 > [!CAUTION]
 > 行为可能带来的负面影响。
 
-### Emoji使用
+## Emoji使用
 :tada: :100:
 [所有支持的emoji列表](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.mjs)
 
 
+## markdown中使用 `vue` 组件
+```md
+// 其他内容
+...
 
-### 注意事项
+<script setup>
+    import CustomComponent from './components/CustomComponent.vue' 
+</script>
+
+<CustomComponent />
+
+// 其他内容
+...
+
+```
+
+
+
+## 注意事项

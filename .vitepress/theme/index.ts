@@ -2,6 +2,8 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+
+// 自定义样式
 import './style.css'
 
 export default {
@@ -13,5 +15,6 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     // ...
+    // app.component('name', Component)
   }
 } satisfies Theme
