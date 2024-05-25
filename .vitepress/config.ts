@@ -117,6 +117,6 @@ function getSidebarLinkList(path = './', prefix = '') {
     link: prefix + item
   }))
 
-  console.log(res)
+  // console.log(res)
   return res
 }
