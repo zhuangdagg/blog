@@ -47,11 +47,15 @@ export default defineConfig({
         items: [
           {
             text: '前端篇',
-            link: '/todo'
+            link: '/docs/frontend/工程化'
           },
           {
             text: '后端篇',
-            link: '/todo'
+            link: '/docs/backend/docker/index'
+          },
+          {
+            text: 'Rust篇',
+            link: '/docs/rust/install'
           },
           {
             text: '笔记',
@@ -78,7 +82,30 @@ export default defineConfig({
           text: '笔记', 
           collapsed: false,
           items: getSidebarLinkList('./docs/note', '/docs/note/')
-        }]
+        }],
+        '/docs/frontend': [{
+          text: '前端篇',
+          collapsed: true,
+          items: getSidebarLinkList('./docs/frontend', '/docs/frontend/')
+        }],
+        '/docs/backend': [
+          {
+            text: '容器化',
+            collapsed: true,
+            items: getSidebarLinkList('./docs/backend/docker', '/docs/backend/docker/')
+          }, {
+            text: 'MongoDB',
+            collapsed: false,
+            items: getSidebarLinkList('./docs/backend/mongodb', '/docs/backend/mongodb/')
+          }
+        ],
+        '/docs/rust': [
+          {
+            text: 'Rust篇',
+            collapsed: true,
+            items: getSidebarLinkList('./docs/rust', '/docs/rust/')
+          }
+        ]
     },
 
     socialLinks: [
