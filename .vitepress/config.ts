@@ -83,6 +83,11 @@ export default defineConfig({
           collapsed: false,
           items: getSidebarLinkList('./docs/note', '/docs/note/')
         }],
+        '/docs/interview': [{
+          text: '面试', 
+          collapsed: false,
+          items: getSidebarLinkList('./docs/interview', '/docs/interview/')
+        }],
         '/docs/frontend': [{
           text: '前端篇',
           collapsed: true,
