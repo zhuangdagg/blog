@@ -1,5 +1,7 @@
 <template>
-  <Repl :editor="editor" :store="store" :clearConsole="true"  />
+  <div class="playground" style="height: 100vh;">
+    <Repl :editor="editor" :store="store" :clearConsole="true"  />
+  </div>
 </template>
 
 <script setup lang="ts">

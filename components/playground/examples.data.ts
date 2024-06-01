@@ -1,11 +1,12 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
+export declare const data: Record<string, Record<string, string>>
+
 // 构建时数据加载 https://vitepress.dev/zh/guide/data-loading#typed-data-loaders
 export default {
     watch: './examples/**',
     load() {
-        console.log({ __dirname })
         const exampleDir = path.resolve(__dirname, './examples')
 
         return readExamples(exampleDir)
@@ -23,7 +24,6 @@ function readExamples(dir) {
 
 function readExample(dir: string) {
     const filenames = fs.readdirSync(dir)
-    console.log({ filenames})
 
     return filenames.reduce((obj, filename) => {
         const fullPath = path.join(dir, filename)
