@@ -58,6 +58,10 @@ export default defineConfig({
             link: '/docs/rust/install'
           },
           {
+            text: 'Web3篇',
+            link: '/docs/web3/基础知识/区块链原理'
+          },
+          {
             text: '笔记',
             link: '/docs/note/issues'
           },
@@ -110,6 +114,17 @@ export default defineConfig({
             collapsed: true,
             items: getSidebarLinkList('./docs/rust', '/docs/rust/')
           }
+        ],
+        '/docs/web3': [
+          {
+            text: 'solana',
+            items: getSidebarLinkList('./docs/web3/solana', '/docs/web3/solana')
+          },
+          {
+            text: '基础知识',
+            collapsed: true,
+            items: getSidebarLinkList('./docs/web3/基础知识', '/docs/web3/基础知识')
+          },
         ]
     },
 

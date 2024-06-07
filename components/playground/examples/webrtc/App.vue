@@ -20,10 +20,13 @@
         <button @click="screenShare">共享屏幕</button>
         <video class="rtc-contain" ref="screenShareRef" autoplay />
     </div>
+    <ConfigModify />
 </template>
 
 <script setup lang="ts">
 import { ref, unref, onMounted } from 'vue'
+
+import ConfigModify from './ConfigModify.vue'
 
 let cameraStream : MediaStream = undefined as any
 let screenStream : MediaStream = undefined as any
