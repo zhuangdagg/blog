@@ -14,7 +14,7 @@ description: ''
 
 <ResumeHelper />
 
-# 简历 | 前端研发岗
+# 简历 | nodejs后端研发岗
 
 ## 个人信息
 
@@ -27,11 +27,25 @@ description: ''
 <!-- <img style="width: 100px; position: absolute; top: 150px; right: 20px;" src="/avator.png" alt="头像" /> -->
 
 ## 个人能力
+- 熟练掌握 nodejs 的使用，有express、koa框架的后端服务开发项目经验；
 - 熟练掌握 基于 `vue` 框架开发的前端主流技术，包括 typescript、vite、monorepo 等；
-- 熟练掌握 nodejs 的使用，有nodejs 构建、后端服务开发项目经验；
 - 掌握常见算法和设计模式，有扎实的编程基础;
+- 掌握 mongodb、 redis、sql、 消息队列操作；
 - 掌握 `docker` 容器化的使用，有开发环境，部署的经验；
 - 了解基于主流地图引擎的业务开发，webRTC技术、webGL技术等;
+
+## 个人项目
+- **`nodejs` 微服务框架** 基于koa框架实现的微服务。  
+
+    技术选型： koa，typescript， esbuild，mongoose， docker等
+
+    架构特点：
+    - 通过配置实现加载所需的中间件
+    - 放弃nacos等服务发现，直接基于网关（主要服务）实现服务的注册功能。
+    - 开发环境基于 esbuild，chokidar 来实现频繁高速的打包构建任务
+    - docker 容器化部署
+    - 基于 monorepo 工程化管理，其中核心包集成了操作amqb、邮件、加密、socket、webRtc等工具
+    - 基于 minio 实现的对象存储，基础服务接口除了基础的上传、下载功能；还实现了大文件的切片断点续传、秒传功能等
 
 ## 工作经历
 
