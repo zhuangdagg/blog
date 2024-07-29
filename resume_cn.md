@@ -79,7 +79,7 @@ description: ''
     - 基于 monorepo 工程化管理，其中核心包集成了操作amqb、邮件、加密、socket、webRtc等工具
     - 基于 minio 实现的对象存储，基础服务接口除了基础的上传、下载功能；还实现了大文件的切片断点续传、秒传功能等
 
-- ** 视频多发平台 ** 基于 electron 实现国内主流平台视频发布管理的垮端桌面应用
+- **视频多发平台** 基于 electron 实现国内主流平台视频发布管理的垮端桌面应用
     技术选型：electron，electron-forge，playwright，indexedDB，vben等
 
     功能特点：
