@@ -9,7 +9,7 @@
 > 事件修饰符：
 
 - `.stop`: `event.stopPropagation()`
-  ![alt](../assets/screenshot/20231013-01.png)
+  <!-- ![alt](../assets/screenshot/20231013-01.png) -->
 - `.prevent`
 
   - `event.preventDefault();` 阻止默认的点击事件执行，但依旧传播

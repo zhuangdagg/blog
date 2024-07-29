@@ -9,6 +9,11 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: './favicon.ico'}]
   ],
+  vite: {
+    ssr: {
+      noExternal: ["@vue/repl"]
+    }
+  },
   lastUpdated: true,
   markdown: {
     container: {
