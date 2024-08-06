@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 马上进入
-      link: /docs/frontend
+      link: /docs/frontend/工程化
     # - theme: alt
     #   text: API Examples
     #   link: /api-examples
