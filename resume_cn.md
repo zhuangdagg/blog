@@ -20,10 +20,10 @@ description: ''
 
 - 个人信息：陈广状 / 男 / 29岁 / 广州
 - 工作年限：5年
-- 学历：[`统招本科 - 五邑大学`](https://www.chsi.com.cn/xlcx/bg.do?vcode=A7J0RYWQXZ8VJGTY&srcid=bgcx) 
+- 学历：[统招本科 - 五邑大学](https://www.chsi.com.cn/xlcx/bg.do?vcode=A7J0RYWQXZ8VJGTY&srcid=bgcx) 
 <!-- - 学信网：https://www.chsi.com.cn/xlcx/bg.do?vcode=A7J0RYWQXZ8VJGTY&srcid=bgcx -->
 <!-- - 期望薪资：22k -->
-- 联系方式：`13544978915` / `1223445257@qq.com`
+- 联系方式：13544978915 / 1223445257@qq.com
 - 博客：https://zhuangdagg.github.io/blog
 - github: https://zhuangdagg.github.com
 
@@ -34,8 +34,8 @@ description: ''
 - **前端框架**：具有丰富的Vue、Taro、UniApp、Element、Antd等框架的开发经验。对Vue底层原理有过深入学习和研究；
 - **前端工程化**：熟练使用Webpack、Rollup、Vite等构件工具，拥有部署npm私服、搭建项目模版、脚手架、组件库、函数库等相关的开发经验, 了解 `rust` 语言开发，对前端工程化的辅助；
 - **后端技能**：具有Node服务端开发经验，可熟练使用Express、Koa、MongoDB、Docker、Nginx等相关技能开发和部署轻量级后端服务；
-- **拓展技能**：熟悉基于qiankun的微前端、基于electron的桌面端的解决方案, 了解基于主流地图引擎的业务开发，webRTC技术、webGL技术等；
-- **前端管理**：熟悉项⽬管理流程，针对业务线⽬标的任务拆解，有业务推动和跨部⻔沟通能⼒。组织过技术分享，担任过公司核心项目前端负责人;
+- **拓展技能**：熟悉基于qiankun的微前端、基于electron的桌面端的解决方案；了解基于Cocos Creator 引擎的小游戏开发，基于主流地图引擎的业务开发，webRTC技术、webGL技术等；
+- **前端管理**：熟悉项⽬管理流程，针对业务线⽬标的任务拆解，有业务推动和跨部⻔沟通能⼒。组织过技术分享，担任过核心项目前端负责人;
 
 ## 工作经历
 
