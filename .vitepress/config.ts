@@ -63,6 +63,14 @@ export default defineConfig({
             link: '/docs/rust/install'
           },
           {
+            text: 'Python篇',
+            link: '/docs/python/conda'
+          },
+          {
+            text: 'LLM',
+            link: '/docs/llm/index'
+          },
+          {
             text: 'Web3篇',
             link: '/docs/web3/基础知识/区块链原理'
           },
@@ -118,6 +126,20 @@ export default defineConfig({
             text: 'Rust篇',
             collapsed: true,
             items: getSidebarLinkList('./docs/rust', '/docs/rust/')
+          }
+        ],
+        '/docs/llm': [
+          {
+            text: 'LLM',
+            collapsed: true,
+            items: getSidebarLinkList('./docs/llm', '/docs/llm/')
+          }
+        ],
+        '/docs/python': [
+          {
+            text: 'python',
+            collapsed: true,
+            items: getSidebarLinkList('./docs/python', '/docs/python/')
           }
         ],
         '/docs/web3': [

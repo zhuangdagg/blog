@@ -18,14 +18,14 @@ description: ''
 
 ## 个人信息
 
-- 个人信息：陈广状 / 男 / 29岁 / 广州
-- 工作年限：5年
+- 个人信息：`陈广状` / `男` / `29岁` / `广州`
+- 工作年限：`5年`
 - 学历：[统招本科 - 五邑大学](https://www.chsi.com.cn/xlcx/bg.do?vcode=A7J0RYWQXZ8VJGTY&srcid=bgcx) 
 <!-- - 学信网：https://www.chsi.com.cn/xlcx/bg.do?vcode=A7J0RYWQXZ8VJGTY&srcid=bgcx -->
 <!-- - 期望薪资：22k -->
-- 联系方式：13544978915 / 1223445257@qq.com
-- 博客：https://zhuangdagg.github.io/blog
-- github: https://zhuangdagg.github.com
+- 联系方式：`13828449290` / `1223445257@qq.com`
+- 博客：`https://zhuangdagg.github.io/blog`
+- github: `https://github.com/zhuangdagg`
 
 <!-- <img style="width: 100px; position: absolute; top: 150px; right: 20px;" src="/avator.png" alt="头像" /> -->
 
