@@ -119,6 +119,11 @@ export default defineConfig({
             text: 'MongoDB',
             collapsed: false,
             items: getSidebarLinkList('./docs/backend/mongodb', '/docs/backend/mongodb/')
+          },
+          {
+            text: 'GraphQL',
+            collapsed: false,
+            items: getSidebarLinkList('./docs/backend/graphql', '/docs/backend/graphql/')
           }
         ],
         '/docs/rust': [
