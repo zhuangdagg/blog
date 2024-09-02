@@ -62,7 +62,7 @@ onMounted(() => {
 })
 
 const getDeviceInfos = () => {
-    navigator.mediaDevices.enumerateDevices().then((res) => {
+    window.navigator.mediaDevices.enumerateDevices().then((res) => {
         console.log(res)
         deviceInfos.value = res
         
@@ -77,7 +77,7 @@ const getUserMedia = () => {
         isOpen.value = false
         return 
     }
-    navigator.mediaDevices.getUserMedia(constraints.value).then((stream) => {
+    window.navigator.mediaDevices.getUserMedia(constraints.value).then((stream) => {
         console.log(videoRef.value);
         cameraStream = stream
         videoRef.value!.srcObject = cameraStream
@@ -101,7 +101,7 @@ const screenShot = () => {
 
 // 共享屏幕
 const screenShare = () => {
-    navigator.mediaDevices.getDisplayMedia(displayMediaConstraints.value).then((stream) => {
+    window.navigator.mediaDevices.getDisplayMedia(displayMediaConstraints.value).then((stream) => {
         screenStream = stream
         screenShareRef.value!.srcObject = screenStream
     }, console.error)

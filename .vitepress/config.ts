@@ -15,6 +15,7 @@ export default defineConfig({
     }
   },
   lastUpdated: true,
+  ignoreDeadLinks: true,
   markdown: {
     container: {
       tipLabel: '提示',
@@ -47,6 +48,7 @@ export default defineConfig({
     },
     nav: [
       { text: '首页', link: '/' },
+      { text: '练习', link: '/playground', target: '_blank' },
       {
         text: '分类',
         items: [
