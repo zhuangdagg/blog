@@ -1,5 +1,10 @@
 import { defineConfig } from 'vitepress'
 import { readdirSync } from 'node:fs'
+import { resolve } from 'node:path'
+
+import { getDocsSideBar } from '../utils/getSideBar'
+
+const dirname = import.meta.dirname
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -48,7 +53,7 @@ export default defineConfig({
     },
     nav: [
       { text: '首页', link: '/' },
-      { text: '练习', link: '/playground', target: '_blank' },
+      { text: '练习场', link: '/playground#test1', target: '_blank' },
       {
         text: '分类',
         items: [
@@ -107,11 +112,7 @@ export default defineConfig({
           collapsed: false,
           items: getSidebarLinkList('./docs/interview', '/docs/interview/')
         }],
-        '/docs/frontend': [{
-          text: '前端篇',
-          collapsed: true,
-          items: getSidebarLinkList('./docs/frontend', '/docs/frontend/')
-        }],
+        '/docs/frontend': getDocsSideBar(resolve(dirname, '../docs/frontend')),
         '/docs/backend': [
           {
             text: '容器化',
@@ -188,16 +189,14 @@ export default defineConfig({
 })
 
 function getPathName(path = './') {
-  return readdirSync(path);
+  const _temp = readdirSync(path);
+  return _temp;
 }
 
 function getSidebarLinkList(path = './', prefix = '') {
-  // console.log(getPathName(path))
   const res = getPathName(path).map(item => ({
     text: item.slice(0, -3),
     link: prefix + item
   }))
-
-  // console.log(res)
   return res
 }

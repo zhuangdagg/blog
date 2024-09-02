@@ -4,3 +4,7 @@
 # vitepress
 .vitepress/cache
 .vitepress/dist
+
+
+# local
+example/
