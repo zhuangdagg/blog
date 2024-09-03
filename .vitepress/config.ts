@@ -113,22 +113,23 @@ export default defineConfig({
           items: getSidebarLinkList('./docs/interview', '/docs/interview/')
         }],
         '/docs/frontend': getDocsSideBar(resolve(dirname, '../docs/frontend')),
-        '/docs/backend': [
-          {
-            text: '容器化',
-            collapsed: true,
-            items: getSidebarLinkList('./docs/backend/docker', '/docs/backend/docker/')
-          }, {
-            text: 'MongoDB',
-            collapsed: false,
-            items: getSidebarLinkList('./docs/backend/mongodb', '/docs/backend/mongodb/')
-          },
-          {
-            text: 'GraphQL',
-            collapsed: false,
-            items: getSidebarLinkList('./docs/backend/graphql', '/docs/backend/graphql/')
-          }
-        ],
+        '/docs/backend': getDocsSideBar(resolve(dirname, '../docs/backend')),
+        // [
+        //   {
+        //     text: '容器化',
+        //     collapsed: true,
+        //     items: getSidebarLinkList('./docs/backend/docker', '/docs/backend/docker/')
+        //   }, {
+        //     text: 'MongoDB',
+        //     collapsed: false,
+        //     items: getSidebarLinkList('./docs/backend/mongodb', '/docs/backend/mongodb/')
+        //   },
+        //   {
+        //     text: 'GraphQL',
+        //     collapsed: false,
+        //     items: getSidebarLinkList('./docs/backend/graphql', '/docs/backend/graphql/')
+        //   }
+        // ],
         '/docs/rust': [
           {
             text: 'Rust篇',
