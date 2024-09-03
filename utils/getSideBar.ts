@@ -46,7 +46,7 @@ export function getDocsSideBar(path: string) {
     }
 
     const basePath = resolve(path)
-    console.log({ basePath})
+
     const stat = lstatSync(basePath)
     if(stat.isDirectory()) {
         return parseSideBar(basePath)

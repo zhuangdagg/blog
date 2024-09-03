@@ -3,7 +3,8 @@
 ## Object attribute
 
 ### 对象属性模型的相关方法
-- `Object.getOwnPropertyDescriptor()` 获取某个属性的描述对象
+- `Object.getOwnPropertyNames` 获取对象所以属性的键名（不包括原型上属性）
+- `Object.getOwnPropertyDescriptor(obj: Object, key: String): { value: any, writable: boolean, enumerable: boolean, configurable: boolean }` 获取某个属性的描述对象
 - `Object.defineProperty()` 通过描述对象，定义某个属性
 - `Object.defineProperties()` 通过描述对象，定义多个属性
 
@@ -18,6 +19,7 @@
 ### 原型链相关方法
 - `Object.create()`：该方法可以指定原型对象和属性，返回一个新的对象。
 - `Object.getPrototypeOf()`：获取对象的Prototype对象。
+- `Object.setPrototypeOf(target:Object, prototype: Object)`：设置对象的原型。
 
 ### Object 实例方法
 - Object.prototype.valueOf()：返回当前对象对应的值。
@@ -26,3 +28,18 @@
 - `Object.prototype.hasOwnProperty()`：判断某个属性是否为当前对象自身的属性，还是继承自原型对象的属性。
 - `Object.prototype.isPrototypeOf()`：判断当前对象是否为另一个对象的原型。
 - `Object.prototype.propertyIsEnumerable()`：判断某个属性是否可枚举。
+
+### Object 拷贝
+> 原型拷贝 `Object.create(obj.prototype)`
+> 属性拷贝 
+```ts
+function copyPropertyDescription(target, source) {
+    Object
+        .getOwnPropertyNames(source)
+        .forEach(function(key) {
+            var desc = Object.getOwnPropertyDescriptor(source, key)
+            Object.defineProperty(target, key, desc)
+        })
+    return target
+}
+```

@@ -23,4 +23,6 @@ export default {
     }
 }
 </script>
-<ExampleRepl />
+<ClientOnly>
+    <ExampleRepl />
+</ClientOnly>
