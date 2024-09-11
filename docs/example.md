@@ -111,6 +111,7 @@ name:
 
 ## Emoji使用
 :tada: :100:
+:blue_book:
 [所有支持的emoji列表](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.mjs)
 
 

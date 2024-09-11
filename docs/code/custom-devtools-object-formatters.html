@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>自定义chrome-devtools-object-formatters</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <sestion>
+            <h1>步骤</h1>
+            <ol>
+                <li>打开开发者管理工具</li>
+                <li>[配置]: Setting &gt; Prefereneces &gt; Console &gt; Custom formatters</li>
+                <li>在控制台查看结果</li>
+            </ol>
+        </sestion>
+        <script>
+            function setupCustomFormatters() {
+                const formatter = {
+                    header(obj, config) {
+                        return ['div', { style: 'color:#3ba776' }, obj.name]
+                    },
+                    hasBody(obj) {
+                        return false
+                    },
+                    body(obj, config) {
+                        return ['div', {}, obj.toString()]
+                    }
+                }
+                if(window.devtoolsFormatters) {
+                    window.devtoolsFormatters.push(formatter)
+                } else {
+                    window.devtoolsFormatters = [formatter]
+                }
+            }
+
+            setupCustomFormatters();
+
+            window.onload = () => {
+                console.log({ name: 'test', value: '666' })
+            }
+        </script>
+    </body>
+</html>
