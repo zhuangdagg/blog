@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeMount, onMounted, reactive, defineAsyncComponent } from "vue";
+import { onBeforeMount, onMounted, reactive, defineAsyncComponent, ref } from "vue";
 import ReplLoading from './ReplLoading.vue'
 // import Mirror from "@vue/repl/codemirror-editor";
 // import Monaco from '@vue/repl/monaco-editor'
@@ -19,11 +19,17 @@ const repl = reactive<any>({
   editor: null
 })
 
+const builtinImportMap = ref<any>({})
+
 onMounted(async () => {
-  const { Repl, useStore,  } = await import('@vue/repl')
+  const { Repl, useStore, useVueImportMap  } = await import('@vue/repl')
+  const { importMap } = useVueImportMap()
+  builtinImportMap.value = importMap.value
   repl.editor = defineAsyncComponent(() => import('@vue/repl/codemirror-editor'))
   repl.is = Repl
-  repl.store = useStore()
+  repl.store = useStore({
+    builtinImportMap
+  })
 
   onHashChange();
 })
@@ -51,6 +57,10 @@ function updateExample() {
     if(!data.hasOwnProperty(hash)) {
         hash = Object.keys(data)?.[0]
         location.hash = '#' + hash
+    }
+    if(hash.indexOf('webgl') !== -1) {
+      builtinImportMap.value.imports!['three'] = "https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js"
+      builtinImportMap.value.imports!['three/addons/'] = "https://cdn.jsdelivr.net/npm/three@0.168.0/examples/jsm/"
     }
     repl.store.setFiles(
         data[hash]

@@ -66,6 +66,10 @@ export default defineConfig({
             link: '/docs/backend/docker/index'
           },
           {
+            text: '3d',
+            link: '/docs/3d/three/基础'
+          },
+          {
             text: 'Rust篇',
             link: '/docs/rust/install'
           },
@@ -114,6 +118,7 @@ export default defineConfig({
         }],
         '/docs/frontend': getDocsSideBar(resolve(dirname, '../docs/frontend')),
         '/docs/backend': getDocsSideBar(resolve(dirname, '../docs/backend')),
+        '/docs/3d': getDocsSideBar(resolve(dirname, '../docs/3d')),
         // [
         //   {
         //     text: '容器化',
