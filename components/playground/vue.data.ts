@@ -5,9 +5,9 @@ export declare const data: Record<string, Record<string, string>>
 
 // 构建时数据加载 https://vitepress.dev/zh/guide/data-loading#typed-data-loaders
 export default {
-    watch: './examples/**',
+    watch: './vue-examples/**',
     load() {
-        const exampleDir = path.resolve(__dirname, './examples')
+        const exampleDir = path.resolve(__dirname, './vue-examples')
 
         return readExamples(exampleDir)
     }

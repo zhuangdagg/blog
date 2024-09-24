@@ -7,10 +7,8 @@
 <script setup lang="ts">
 import { onBeforeMount, onMounted, reactive, defineAsyncComponent, ref } from "vue";
 import ReplLoading from './ReplLoading.vue'
-// import Mirror from "@vue/repl/codemirror-editor";
-// import Monaco from '@vue/repl/monaco-editor'
 
-import { data } from './examples.data'
+import { data } from './vue.data'
 
 const repl = reactive<any>({
   is: null,

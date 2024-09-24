@@ -53,7 +53,12 @@ export default defineConfig({
     },
     nav: [
       { text: '首页', link: '/' },
-      { text: '练习场', link: '/playground#test1', target: '_blank' },
+      { text: '练习场', 
+        items: [
+          { text: 'vanilla', link: '/js-playground#test1', target: '_blank' },
+          { text: 'vue', link: '/playground#test1', target: '_blank' },
+        ]
+      },
       {
         text: '分类',
         items: [
