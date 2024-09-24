@@ -1,7 +1,6 @@
 <template>
   <div class="playground" style="height: 100vh;">
-    <ReplLoading v-if="!repl.is" />
-    <component v-else :is="repl.is" :editor="repl.editor" :store="repl.store" :clearConsole="true"  />
+    <component v-if="repl.is" :is="repl.is" :editor="repl.editor" :store="repl.store" :showCompileOutput="true" :clearConsole="true"  />
   </div>
 </template>
 
@@ -25,7 +24,11 @@ onMounted(async () => {
   const { Repl, useStore, useVueImportMap  } = await import('@vue/repl')
   const { importMap } = useVueImportMap()
   builtinImportMap.value = importMap.value
-  repl.editor = defineAsyncComponent(() => import('@vue/repl/codemirror-editor'))
+  repl.editor = defineAsyncComponent({
+    loader: () => import('@vue/repl/codemirror-editor'),
+    loadingComponent: ReplLoading
+  })
+  // repl.editor = defineAsyncComponent(() => import('@vue/repl/monaco-editor'))
   repl.is = Repl
   repl.store = useStore({
     builtinImportMap

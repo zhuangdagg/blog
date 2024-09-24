@@ -4,7 +4,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 
 import Playground from '../../components/playground/playground.vue'
-
+import JsPlayground from '../../components/playground/JsPlayground.vue'
 // 自定义样式
 import './style.css'
 
@@ -18,5 +18,6 @@ export default {
   enhanceApp({ app, router, siteData }) {
     // ...
     app.component('Playground', Playground)
+    app.component('JsPlayground', JsPlayground)
   }
 } satisfies Theme
