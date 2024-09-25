@@ -1,5 +1,3 @@
 declare var window: Window & typeof globalThis
 
-interface Window {
-    _hml: any[]
-}
+declare var _hml: any[] | undefined

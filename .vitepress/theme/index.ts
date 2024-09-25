@@ -22,8 +22,6 @@ export default {
 
     // 百度统计
     router.onAfterRouteChanged = (to) => {
-      console.log(to, '--to')
-      const _hml = window._hml
       if(typeof _hml != "undefined") {
         _hml.push(["_trackPageview", to])
       }
