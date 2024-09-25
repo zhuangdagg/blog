@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "个人博客"
+  name: "Zhuangdagg Blog"
   text: "learn, record, review"
   tagline: good good study, day day money
   actions:
@@ -31,7 +31,6 @@ features:
 </div>
 :::
 
-<!-- <div>
-  <h3 style="display: inline-block">如果没有电脑，那我们就只能写写代码了。</h3>
-</div> -->
+
+
 

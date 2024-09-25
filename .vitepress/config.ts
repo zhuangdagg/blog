@@ -12,7 +12,19 @@ export default defineConfig({
   description: "学习、记录、巩固",
   base: '/blog/',
   head: [
-    ['link', { rel: 'icon', href: './favicon.ico'}]
+    ['link', { rel: 'icon', href: './favicon.ico'}],
+    [
+      'script',
+      {},
+      `var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?a72f3f2da8c8182cbfdcfe91c47d9adc";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+      `
+    ]
   ],
   vite: {
     ssr: {
