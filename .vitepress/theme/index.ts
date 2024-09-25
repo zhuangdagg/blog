@@ -22,8 +22,9 @@ export default {
 
     // 百度统计
     router.onAfterRouteChanged = (to) => {
-      if(typeof _hml != "undefined") {
-        _hml.push(["_trackPageview", to])
+      if(typeof _hmt != "undefined") {
+        console.log('to:'+to)
+        _hmt.push(["_trackPageview", to])
       }
     }
   }
