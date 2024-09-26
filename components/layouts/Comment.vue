@@ -5,6 +5,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import useFetchUtils from '/api/useFetchUtils'
+import { useQuery } from '../../api/useFetchUtils';
 
 
 onMounted(() => {
@@ -15,5 +16,7 @@ onMounted(() => {
 async function testFetch() {
     const { test } = useFetchUtils()
     test()
+
+    useQuery().then(console.log, console.error)
 }
 </script>
