@@ -1,12 +1,14 @@
 <template>
-    <div>评论</div>
+    <div>{{ content }}</div>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
-import useFetchUtils from '/api/useFetchUtils'
-import { useQuery } from '../../api/useFetchUtils';
+import { onMounted, ref } from 'vue';
+import { useGraphQL } from '../../api/useGraphQL';
 
+const { comment } = useGraphQL()
+
+const content = ref<any>()
 
 onMounted(() => {
     testFetch()
@@ -14,9 +16,9 @@ onMounted(() => {
 
 
 async function testFetch() {
-    const { test } = useFetchUtils()
-    test()
 
-    useQuery().then(console.log, console.error)
+    comment.query.list().then((res) => {
+        content.value = res.data.getComment
+    })
 }
 </script>
