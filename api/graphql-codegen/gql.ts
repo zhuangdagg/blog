@@ -13,7 +13,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
-    "\n    query list($topic_id: String!) {\n        getComment(topic_id: $topic_id) {\n            topic_id, content\n        }\n    }\n": types.ListDocument,
+    "\n    query list($topic_id: String!) {\n        getComment(topic_id: $topic_id) {\n            topic_id, content, from_user_id, createdAt\n        }\n    }\n": types.ListDocument,
     "\n    mutation addComment($data: addCommentInput) {\n        addComment(data: $data) {\n            content\n        }\n    }\n": types.AddCommentDocument,
     "\n                query Text {\n                    getText {\n                        name, content\n                    }\n                }\n            ": types.TextDocument,
 };
@@ -35,7 +35,7 @@ export function graphql(source: string): unknown;
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function graphql(source: "\n    query list($topic_id: String!) {\n        getComment(topic_id: $topic_id) {\n            topic_id, content\n        }\n    }\n"): (typeof documents)["\n    query list($topic_id: String!) {\n        getComment(topic_id: $topic_id) {\n            topic_id, content\n        }\n    }\n"];
+export function graphql(source: "\n    query list($topic_id: String!) {\n        getComment(topic_id: $topic_id) {\n            topic_id, content, from_user_id, createdAt\n        }\n    }\n"): (typeof documents)["\n    query list($topic_id: String!) {\n        getComment(topic_id: $topic_id) {\n            topic_id, content, from_user_id, createdAt\n        }\n    }\n"];
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

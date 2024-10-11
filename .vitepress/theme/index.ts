@@ -8,6 +8,8 @@ import JsPlayground from '../../components/playground/JsPlayground.vue'
 // 自定义样式
 import './style.css'
 
+import '@akjs/components/style.css'
+
 export default {
   extends: DefaultTheme,
   Layout: () => {

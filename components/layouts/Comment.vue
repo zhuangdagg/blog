@@ -1,5 +1,5 @@
 <template>
-    <div>{{ content }}</div>
+    <Comment :data="content" />
 
     <form>
         <input />
@@ -11,9 +11,10 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
+import { Comment, useComment } from '@akjs/components'
+
 import { useGraphQL } from '../../api/useGraphQL';
 
-const { comment } = useGraphQL()
 
 const content = ref<any>()
 
@@ -24,7 +25,7 @@ onMounted(() => {
 
 async function testFetch() {
 
-    comment.query.list().then((res) => {
+    useGraphQL().comment.query.list().then((res) => {
         content.value = res.data.getComment
     })
 }

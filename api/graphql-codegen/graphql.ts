@@ -22,7 +22,7 @@ export type Comment = {
   __typename?: 'Comment';
   _id?: Maybe<Scalars['String']['output']>;
   content?: Maybe<Scalars['String']['output']>;
-  createAt?: Maybe<Scalars['Date']['output']>;
+  createdAt?: Maybe<Scalars['String']['output']>;
   from_user_id?: Maybe<Scalars['String']['output']>;
   hateCount?: Maybe<Scalars['Int']['output']>;
   level?: Maybe<Scalars['Int']['output']>;
@@ -34,7 +34,7 @@ export type Comment = {
   to_user_id?: Maybe<Scalars['String']['output']>;
   topic_id?: Maybe<Scalars['String']['output']>;
   topic_type?: Maybe<Scalars['String']['output']>;
-  updateAt?: Maybe<Scalars['Date']['output']>;
+  updatedAt?: Maybe<Scalars['String']['output']>;
 };
 
 export type Mutation = {
@@ -89,7 +89,7 @@ export type ListQueryVariables = Exact<{
 }>;
 
 
-export type ListQuery = { __typename?: 'Query', getComment?: Array<{ __typename?: 'Comment', topic_id?: string | null, content?: string | null } | null> | null };
+export type ListQuery = { __typename?: 'Query', getComment?: Array<{ __typename?: 'Comment', topic_id?: string | null, content?: string | null, from_user_id?: string | null, createdAt?: string | null } | null> | null };
 
 export type AddCommentMutationVariables = Exact<{
   data?: InputMaybe<AddCommentInput>;
@@ -104,6 +104,6 @@ export type TextQueryVariables = Exact<{ [key: string]: never; }>;
 export type TextQuery = { __typename?: 'Query', getText?: { __typename?: 'TextMsg', name?: string | null, content?: string | null } | null };
 
 
-export const ListDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"list"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"topic_id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"getComment"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"topic_id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"topic_id"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"topic_id"}},{"kind":"Field","name":{"kind":"Name","value":"content"}}]}}]}}]} as unknown as DocumentNode<ListQuery, ListQueryVariables>;
+export const ListDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"list"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"topic_id"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"getComment"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"topic_id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"topic_id"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"topic_id"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"from_user_id"}},{"kind":"Field","name":{"kind":"Name","value":"createdAt"}}]}}]}}]} as unknown as DocumentNode<ListQuery, ListQueryVariables>;
 export const AddCommentDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"addComment"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"data"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"addCommentInput"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"addComment"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"data"},"value":{"kind":"Variable","name":{"kind":"Name","value":"data"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"content"}}]}}]}}]} as unknown as DocumentNode<AddCommentMutation, AddCommentMutationVariables>;
 export const TextDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Text"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"getText"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"content"}}]}}]}}]} as unknown as DocumentNode<TextQuery, TextQueryVariables>;
