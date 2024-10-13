@@ -26,6 +26,7 @@
     "vue": "^3.4.27"
   },
   "dependencies": {
+    "@akjs/components": "^0.0.2-alpha",
     "@apollo/client": "^3.11.8",
     "@vue/repl": "^4.2.1",
     "graphql": "^15.9.0",
