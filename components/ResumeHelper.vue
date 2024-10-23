@@ -50,6 +50,9 @@ const handlePrint = () => {
             display: none;
         }
     }
+    .resume-helper {
+        display: none;
+    }
     
 }
 </style>

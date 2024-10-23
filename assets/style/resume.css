@@ -1,0 +1,13 @@
+.resume-content {
+    .VPDoc {
+        padding: 20px 10px 0;
+    }
+
+    .vp-doc h2 {
+        margin: 20px 0 8px;
+        padding-top: 10px;
+    }
+    .vp-doc h3 {
+        margin: 20px 0 0;
+    }
+}

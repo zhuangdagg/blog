@@ -5,6 +5,7 @@ import DefaultTheme from 'vitepress/theme'
 
 import Playground from '../../components/playground/playground.vue'
 import JsPlayground from '../../components/playground/JsPlayground.vue'
+import wechatLink from '../../components/layouts/wechatLink.vue'
 // 自定义样式
 import './style.css'
 
@@ -15,6 +16,7 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      "nav-bar-content-after": () => h(wechatLink)
     })
   },
   enhanceApp({ app, router, siteData }) {

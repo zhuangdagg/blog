@@ -4,12 +4,13 @@ sidebar: false
 outline: deep
 # layout: false
 pageClass: resume-content
-title: '简历'
+title: '个人简历'
 description: ''
 ---
 
 <script setup>
     import ResumeHelper from './components/ResumeHelper.vue'
+    import './assets/style/resume.css'
 </script>
 
 <ResumeHelper />
@@ -18,23 +19,23 @@ description: ''
 
 ## 个人信息
 
-- 个人信息：`陈广状` / `男` / `30岁` / `广州`
+- 个人信息：`陈广状` / `男` / `30岁` / `广州` / `已离职`
 - 工作年限：`5年`
-- 学历：[统招本科 - 五邑大学](https://www.chsi.com.cn/xlcx/bg.do?vcode=A7J0RYWQXZ8VJGTY&srcid=bgcx) 
+- 学历：[本科 - 五邑大学](https://www.chsi.com.cn/xlcx/bg.do?vcode=A7J0RYWQXZ8VJGTY&srcid=bgcx) 
 <!-- - 学信网：https://www.chsi.com.cn/xlcx/bg.do?vcode=A7J0RYWQXZ8VJGTY&srcid=bgcx -->
-<!-- - 期望薪资：22k -->
+<!-- - 期望薪资：15k -->
 - 联系方式：`13828449290` / `1223445257@qq.com`
 - 博客：`https://zhuangdagg.github.io/blog`
-- github: `https://github.com/zhuangdagg`
+- 开源: `https://github.com/zhuangdagg`
 
 <!-- <img style="width: 100px; position: absolute; top: 150px; right: 20px;" src="/avator.png" alt="头像" /> -->
 
 ## 专业技能
-- **前端能力**：扎实的 HTML、CSS、JavaScript、TypeScript、⼩程序基础, 掌握常见算法和设计模式，有扎实的编程基础；具有丰富的Vue、Taro、UniApp、WebGL等框架的开发经验。对Vue底层原理有过深入学习和研究；
-- **前端工程化**：熟练使用Webpack、Rollup、Vite等构件工具，拥有部署npm私服、搭建项目模版、脚手架、组件库、函数库等相关的开发经验, 了解 `rust` 语言开发，对前端工程化的辅助；
-- **后端技能**：具有Node服务端开发经验，可熟练使用Koa、MongoDB、Docker、Nginx等相关技能开发和部署轻量级后端服务；
+- **前端能力**：扎实的前端基础, 掌握常见算法和设计模式；具有丰富的Vue框架的项目开发经验。了解Vue底层原理；能迅速消化上手代码；
+- **前端工程化**：熟练Rollup、Vite、Webpack等底层构建流程，掌握开发和使用插件构建和优化, 了解 `rust` 语言开发，对前端工程化的辅助；
+- **后端技能**：具有Node、python服务端开发经验，可熟练使用Koa、MongoDB、Docker、Nginx等相关技能开发和部署轻量级后端服务；
 - **拓展技能**：了解基于qiankun的微前端、基于electron的桌面端的解决方案；了解基于Cocos Creator 引擎的小游戏开发，基于主流地图引擎的业务开发，webRTC技术、webGL技术等；
-- **前端管理**：熟悉项⽬管理流程，针对业务线⽬标的任务拆解，有业务推动和跨部⻔沟通能⼒。组织过技术分享，担任过核心项目前端负责人;
+- **前端管理**：熟悉项⽬开发流程，针对业务线⽬标的任务拆解，有业务推动和跨部⻔沟通能⼒。组织过技术分享，担任过部门核心项目前端负责人;
 
 ## 工作经历
 
@@ -45,13 +46,13 @@ description: ''
     **项目一： ACS地铁门禁管理系统 - 前端负责人**   
     > **项目背景**：目前公司服务于地铁公司的门禁后台管理软件系统是第三方的，其技术框架陈旧，无法满足业务扩展，想自研一套。
 
-    > **项目描述**：针对公司旗下的门禁硬件系统，打造一套多场景、多设备的控制管理后台系统；其中包括人脸数据录入，设备状态，数据下方，签到打卡等业务功能。
+    > **项目描述**：针对公司旗下的门禁硬件系统，打造一套多场景、多设备的控制管理后台系统；其中包括人脸数据录入，设备状态，数据下发，签到打卡等业务功能。
 
-    > **技术选型**：Typescript、Vue3、Vite、Ant design vue etc.
+    > **技术选型**：Typescript、Vue3、Vite、Ant-design-vue etc.
     
     > **主要职责**：  
-    >1. 设计多区域多站点的 sass 平台框架，拆分需求制定开发周期计划，和后端沟通接口规则，从0-1进行项目的开发和迭代；
-    >2. 全局通用表格、表单等组件的设计和开发；
+    >1. 设计多用户多权限的大型 sass 平台框架，拆分需求制定开发周期计划，和后端沟通接口规则，从0-1进行项目的开发和迭代；
+    >2. 全局通用表格、表单等组件的设计和开发；(极大的提高业务的开发效率，并减低心智负担，减低bug)
     >3. 基于pixi.js 和 gsap 打造门禁设备状态颗粒度极小的可视化动效场景;
 
     **项目二：边缘小站 - 前端负责人**：
@@ -62,19 +63,20 @@ description: ''
     >1. 兼容多种不同类型不同型号的设备接入；
     >2. 设备拓扑可视化操作；
     >3. 实现地图绘制区域等交互操作。
+    >4. 路口雷达数据在地图上的实时展示；
 
-    > **技术选型**：Vue2、Webpack、ElementUI etc.
+    > **技术选型**：Vue2、Webpack、ElementUI、一些公司生态技术 etc.
     
     > **主要职责**： 
     >   1. 设计基础框架，技术栈选型，全局布局样式调整和大部分业务开发；
     >   2. 设计设备相关组件；采用了依赖注入的思想，真正意义做的低耦合，高可用；
     >   3. 实现基于 mapbox 地图引擎与路口多种设备交换，包括给激光雷达圈定侦测区域，给管理人员绘制区分车道等；；
-    >   4. 采用AntV G6 实现设备拓扑编辑器，并实现undo/redo等操作;
+    >   4. 采用AntV G6 实现设备拓扑可视化编辑器，设计了简易的拖拽，连线来操作拓扑关系，并实现操作记录的undo/redo等功能;
 
     **项目三：交通大模型AI助手**
     > **项目描述**：一款基于交通领域微调的大模型+知识库的问答助手，并具备function calling来调用外面应用功能（pc+h5）；
 
-    > **技术选型**：Vue2、Webpack、ElementUI、websocket etc.
+    > **技术选型**：Vue2、Webpack、websocket etc.
 
     > **主要职责**:
     >1. 熟悉大模型问答流程，根据问答数据种类，处理数据的显示；
@@ -112,7 +114,7 @@ description: ''
     架构特点：
     - 通过配置实现加载所需的中间件
     - 摒弃nacos等服务发现，直接基于网关（主要服务）实现服务的注册功能。
-    - 开发环境基于 esbuild，chokidar 来实现频繁高速的打包构建任务。
+    - 开发环境基于 esbuild，chokidar 来加速打包构建任务。
     - docker 容器化部署，可基于docker compose 和 docker swarm部署服务。
     - 基于 monorepo 工程化管理，其中核心包集成了操作amqb、邮件、加密、socket、webRtc等工具
     - 对象存储，基础服务接口除了基础的上传、下载功能；还实现了大文件的切片断点续传、秒传功能等
