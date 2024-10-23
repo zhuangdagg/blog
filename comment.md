@@ -8,7 +8,7 @@ footer: true
 pageClass: ''
 ---
 
-<script>
+<!-- <script>
 import Comment from '/components/layouts/Comment.vue'
 
 export default {
@@ -16,4 +16,4 @@ export default {
 }
 </script>
 
-<ClientOnly><Comment /></ClientOnly>
+<ClientOnly><Comment /></ClientOnly> -->
