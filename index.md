@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Zhuangdagg Blog"
+  name: "Blunt's Blog"
   text: "learn, record, review"
   tagline: good good study, day day money
   actions:
@@ -26,7 +26,7 @@ features:
 
 ::: info 每日一句
 <div>
-  <h3>如果没有电，那我们就得借着烛光看电视。</h3>
+  <h3 title="世界不存在电，是阻止不了电视被发明的。同理，也阻止不了代码的运行">如果没有电，那我们就得借着烛光看电视。</h3>
   <div style="text-align: right"> ——乔治·戈布尔</div>
 </div>
 :::

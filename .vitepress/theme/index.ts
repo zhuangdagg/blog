@@ -9,7 +9,8 @@ import wechatLink from '../../components/layouts/wechatLink.vue'
 // 自定义样式
 import './style.css'
 
-import '@akjs/components/style.css'
+// TODO: github action build error
+// import '@akjs/components/style.css'
 
 export default {
   extends: DefaultTheme,
