@@ -1,0 +1,73 @@
+#app {
+    padding: 10px;
+    /* text-align: center; */
+    ol {
+        /* border: 1px solid; */
+    }
+    li:not(:first-child) {
+        margin-top: 10px;
+    }
+
+    .parent {
+        border: 1px solid rgba(0, 0, 0, .3);
+        height: 250px;
+        transition: all 1s;
+    }
+
+    .child {
+        background-color: rgba(0, 0, 0, .3);
+        color: rgb(248, 253, 254);
+        transition: all 1s;
+        width: 50%;
+        height: 50%;
+    }
+
+    .method-1 {
+        text-align: center;
+        line-height: 250px;
+
+        .child {
+            display: inline;
+        }
+    }
+
+    .method-2 {
+        position: relative;
+        /* 固定子元素宽高，并配置外间距为auto； */
+        .child {
+            position: absolute;
+            top: 50%;
+            margin-top: -62.5px;
+        }
+    }
+
+    .method-3 {
+        position: relative;
+
+        .child {
+            position: absolute;
+            left: 0; right: 0;
+            top: 0; bottom: 0;
+            margin: auto;
+            
+            
+        }
+    }
+
+    .method-4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .method-5 {
+        display: table;
+        width: 100%;
+        .child {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        } 
+    }
+
+};

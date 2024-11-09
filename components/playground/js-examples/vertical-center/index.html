@@ -1,0 +1,33 @@
+<div id="app">
+    <h1>垂直居中</h1>
+    <ol>
+        <li>
+            <input type="radio" id="one" checked name="method" value="1" onclick="selectMethod(this)" />
+            <label for="one">元素为⾏内元素，设置⽗元素 <b>line-height设为 height </b></label>
+        </li>
+        <li>
+            <input type="radio" id="two" name="method" value="2" onclick="selectMethod(this)" />
+            <label for="two">元素宽高固定，设置左右 <b>top: 50%; margin-top: -25%;</b></label>
+        </li>
+        <li>
+            <input type="radio" id="3" name="method" value="3" onclick="selectMethod(this)" />
+            <label for="3">元素绝对定位，设置父元素 <code>position: relative;</code> 
+                元素设为：
+                <code>top: 0; bottom: 0; margin: auto;</code>
+            </label>
+        </li>
+        <li>
+            <input type="radio" id="4" name="method" value="4" onclick="selectMethod(this)" />
+            <label for="4">flex-box布局；align-items: center;</label>
+        </li>
+        <li>
+            <input type="radio" id="5" name="method" value="5" onclick="selectMethod(this)" />
+            <label for="5">display: table-cell; vertial-align: middle;</label>
+        </li>
+    </ol>
+
+    <h2>展示：</h2>
+    <div class="parent" title="父元素">
+        <div class="child" title="子元素">子元素</div>
+    </div>
+</div>

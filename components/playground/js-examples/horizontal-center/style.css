@@ -1,0 +1,66 @@
+#app {
+    padding: 10px;
+    /* text-align: center; */
+    ol {
+        /* border: 1px solid; */
+    }
+    li:not(:first-child) {
+        margin-top: 10px;
+    }
+
+    .parent {
+        border: 1px solid rgba(0, 0, 0, .3);
+        height: 150px;
+        transition: all 1s;
+    }
+
+    .child {
+        background-color: rgba(0, 0, 0, .3);
+        color: rgb(248, 253, 254);
+        transition: all 1s;
+        width: 50%;
+        height: 50%;
+    }
+
+    .method-1 {
+        text-align: center;
+
+        .child {
+            display: inline;
+        }
+    }
+
+    .method-2 {
+        /* 固定子元素宽高，并配置外间距为auto； */
+        .child {
+            margin: auto;
+        }
+    }
+
+    .method-3 {
+        position: relative;
+
+        .child {
+            position: absolute;
+            left: 0; right: 0;
+            margin: auto;
+            
+        }
+    }
+
+    .method-4 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .method-5 {
+        display: table;
+        width: 100%;
+        text-align: center;
+        .child {
+            display: table-cell;
+        }
+        
+    }
+
+};
