@@ -9,7 +9,7 @@
 
 ## 生命周期构子
 
-![alt]('/assets/capture/lifecycle_hooks.png')
+![alt](/assets/capture/lifecycle_hooks.png)
 
 ## 侦听器（`watch`, `watchEffect`）
 
