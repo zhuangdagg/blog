@@ -138,7 +138,6 @@ export default function useThreeDecal() {
     function addModel() {
         const loader = new GLTFLoader()
         loader.load('./model/仙人掌_01.glb', (gltf) => {
-            console.log({ gltf })
             gltf.scene.scale.set(4, 4, 4)
             scene.add(gltf.scene)
             cactusMesh = gltf.scene.children[5]
@@ -162,7 +161,7 @@ export default function useThreeDecal() {
         raycaster.setFromCamera( mouse, camera );
 
         interaction.intersects = raycaster.intersectObject(cactusMesh, false )
-        console.log(interaction.intersects)
+
         if(interaction.intersects.length) {
             const { point, face } = interaction.intersects[0] as any
             const n = face!.normal.clone();
