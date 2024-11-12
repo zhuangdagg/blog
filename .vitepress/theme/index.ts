@@ -6,6 +6,7 @@ import DefaultTheme from 'vitepress/theme'
 import Playground from '../../components/playground/playground.vue'
 import JsPlayground from '../../components/playground/JsPlayground.vue'
 import wechatLink from '../../components/layouts/wechatLink.vue'
+import HeroImage from '../../components/layouts/HeroImage.vue'
 // 自定义样式
 import './style.css'
 
@@ -17,6 +18,7 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      "home-hero-image": () => h(HeroImage),
       "nav-bar-content-after": () => h(wechatLink)
     })
   },
