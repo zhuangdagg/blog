@@ -36,8 +36,8 @@ export default function useThreeDecal() {
     scene.add(directLight)
 
     const textureLoader = new TextureLoader()
-    const decalDiffuse = textureLoader.load('./assets/texture/decal/decal-diffuse.png')
-    const decalNormal = textureLoader.load('./assets/texture/decal/decal-normal.jpg')
+    const decalDiffuse = textureLoader.load('./texture/decal/decal-diffuse.png')
+    const decalNormal = textureLoader.load('./texture/decal/decal-normal.jpg')
 
     const renderer = new WebGLRenderer({ antialias: true })
     renderer.setPixelRatio(window.devicePixelRatio)
@@ -137,7 +137,7 @@ export default function useThreeDecal() {
 
     function addModel() {
         const loader = new GLTFLoader()
-        loader.load('./assets/model/仙人掌_01.glb', (gltf) => {
+        loader.load('./model/仙人掌_01.glb', (gltf) => {
             console.log({ gltf })
             gltf.scene.scale.set(4, 4, 4)
             scene.add(gltf.scene)
