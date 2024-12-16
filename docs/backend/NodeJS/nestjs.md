@@ -11,3 +11,6 @@
 | minute 取值：0-59
 second (optional) 取值：0-59
 ```
+
+## @nestjs/config 
+> 好像永远会首先读取 `.env` 文件；
