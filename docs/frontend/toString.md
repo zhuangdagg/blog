@@ -42,8 +42,7 @@ type(/abcd/); // "regex"
 type(new Date()); // "date"
 
 [
-    'Null',
-    'Undefined',
+    'Null', 'Undefined',
     'Object',
     'Array',
     'String',
@@ -53,8 +52,10 @@ type(new Date()); // "date"
     'RegExp',
     'Symbol',
     'BigInt',
+    'Map', 'WeakMap',
+    'Set', 'WeakSet'
 ].forEach((t) => {
-    type['is' + t] = (o) => Object.prototype.toString.call(o) === t
+    type['is' + t] = (o) => Object.prototype.toString.call(o).match(/\[object (.*?)\]/)[1] === t
 })
 
 type.isObject({}) // true
