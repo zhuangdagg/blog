@@ -3,8 +3,6 @@
         <div class="avatar">
             <img src="/blog/assets/images/snake.png" />
         </div>
-        
-        <div class="bg"></div>
     </div>
 </template>
 
